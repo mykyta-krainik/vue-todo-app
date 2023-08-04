@@ -1,0 +1,11 @@
+:root {
+  --transition-duration: 0.3s;
+}
+
+#app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  font-weight: normal;
+}
