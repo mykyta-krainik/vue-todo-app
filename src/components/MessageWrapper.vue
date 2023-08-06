@@ -10,6 +10,10 @@ const props = defineProps({
 
 const emit = defineEmits(['update'])
 
+function hideMessage() {
+  emit('update', '')
+}
+
 function isMessageVisible(message) {
   if (message) {
     setTimeout(hideMessage, 3000)
@@ -18,10 +22,6 @@ function isMessageVisible(message) {
   }
 
   return false
-}
-
-function hideMessage() {
-  emit('update', '')
 }
 </script>
 
@@ -46,8 +46,12 @@ function hideMessage() {
   background-color: #d43823;
   color: #fff;
 
+  opacity: 1;
+
+  transition: opacity var(--transition-duration) ease-out;
+
   &--hidden {
-    display: none;
+    opacity: 0;
   }
 
   &__header {
@@ -76,7 +80,7 @@ function hideMessage() {
 
   &__delete {
     position: absolute;
-    right: 8px;
+    right: 12px;
     top: 0;
     bottom: 0;
 
@@ -88,7 +92,7 @@ function hideMessage() {
     background: none;
     cursor: pointer;
 
-    transition: color 0.2s ease-out;
+    transition: color var(--transition-duration) ease-out;
 
     &:hover {
       color: #aaa1a1;

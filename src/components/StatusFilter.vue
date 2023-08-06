@@ -1,25 +1,19 @@
 <script setup>
-import { defineEmits, defineProps } from 'vue'
+import { useStore } from 'vuex'
 
-const props = defineProps({
-  modelValue: {
-    type: String,
-    required: true,
-  },
-})
+const store = useStore()
 
-const emit = defineEmits(['update:modelValue'])
-
-function save(status) {
-  emit('update:modelValue', status)
+function save(newStatus) {
+  store.commit('changeStatus', newStatus)
 }
 </script>
+
 <template>
   <nav class="filter">
     <a
       href="#/"
       class="filter__link"
-      :class="{ 'filter__link--selected': props.modelValue === 'all' }"
+      :class="{ 'filter__link--selected': store.state.status.status === 'all' }"
       @click="save('all')"
     >
       All
@@ -28,7 +22,7 @@ function save(status) {
     <a
       href="#/active"
       class="filter__link"
-      :class="{ 'filter__link--selected': props.modelValue === 'active' }"
+      :class="{ 'filter__link--selected': store.state.status.status === 'active' }"
       @click="save('active')"
     >
       Active
@@ -37,7 +31,7 @@ function save(status) {
     <a
       href="#/completed"
       class="filter__link"
-      :class="{ 'filter__link--selected': props.modelValue === 'completed' }"
+      :class="{ 'filter__link--selected': store.state.status.status === 'completed' }"
       @click="save('completed')"
     >
       Completed
