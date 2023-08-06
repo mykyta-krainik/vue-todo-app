@@ -1,6 +1,7 @@
 # Vue Todo App
 
 Tech stack: HTML, SCSS, JS, Vue, Vuex, ESlint, Prettier, Vite
+
 [Preview](https://mykyta-krainik.github.io/vue-todo-app/)
 
 This repository contains the TodoApp with the following features:
