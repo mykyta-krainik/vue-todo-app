@@ -1,35 +1,13 @@
-# vue-todo-app-2
+# Vue Todo App
 
-This template should help get you started developing with Vue 3 in Vite.
+Tech stack: HTML, SCSS, JS, Vue, Vuex, ESlint, Prettier, Vite
+[Preview](https://mykyta-krainik.github.io/vue-todo-app/)
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+This repository contains the TodoApp with the following features:
+- Add the todo
+- Edit a todo
+- Check your todo as completed or incompleted
+- Check all todos as completed or incompleted using the arrow button that is next to the input field
+- Filter todos by status (all, active, completed)
+- Delete the todo (removing also happens if you keep a new todo title empty during the editing)
+- Delete all completed todos by pressing the "Clear completed" button on the bottom right
